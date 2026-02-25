@@ -9,12 +9,17 @@ OUT_CSV = DATA_DIR / "weather_clean.csv"
 
 # Con parse_raw_file consigo extraes los datos relevantes del JSON para devolverlos en datos analizables y estructurados.
 def parse_raw_file(path: Path) -> dict:
+    # ciudad = parte del nombre del archivo antes del primer "_"
+    safe_city = path.stem.split("_")[0]  # madrid, barcelona...
+    city = safe_city.replace("-", " ").replace("__", "_")  # por si acaso
+
     with open(path, encoding="utf-8") as f:
         payload = json.load(f)
 
     current = payload.get("current_weather", {})
+
     return {
-        "city": payload.get("timezone", "").split("/")[-1],
+        "city": safe_city,  # guardamos en formato consistente: madrid, barcelona...
         "timestamp_utc": current.get("time"),
         "temperature_c": current.get("temperature"),
         "wind_speed_kmh": current.get("windspeed"),

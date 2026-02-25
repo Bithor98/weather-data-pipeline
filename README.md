@@ -68,5 +68,17 @@ Campos:
 
 ---
 
+## 📊 Consultas SQL
+
+El proyecto incluye consultas SQL para analizar datos meteorológicos históricos:
+
+- Número de registros por ciudad
+- Última lectura disponible por ciudad
+- Ranking de ciudades por temperatura en la última lectura
+
+Las consultas completas están disponibles en `sql/consultas.sql`.
+
+---
+
 ## 📌 Estado del proyecto
 Diseño inicial creado. Próximo paso: implementación de extracción, transformación y carga incremental.
