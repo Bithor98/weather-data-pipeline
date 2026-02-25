@@ -82,3 +82,13 @@ Las consultas completas están disponibles en `sql/consultas.sql`.
 
 ## 📌 Estado del proyecto
 Diseño inicial creado. Próximo paso: implementación de extracción, transformación y carga incremental.
+
+---
+
+## 🤖 Uso de IA en el proyecto
+
+Durante el desarrollo de este proyecto se ha utilizado inteligencia artificial
+como herramienta de apoyo para el aprendizaje, revisión de código y validación
+de buenas prácticas.  
+El diseño, comprensión y explicación del pipeline forman parte del proceso de
+aprendizaje personal.
